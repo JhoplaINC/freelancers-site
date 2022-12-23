@@ -1,3 +1,5 @@
 <?php require_once '../blocks/head.php'; ?>
-<h1>Registrado</h1>
+
+<?php include '../data/get_data/getUserData.php'; ?>
+
 <?php require_once '../blocks/footer.php'; ?>
