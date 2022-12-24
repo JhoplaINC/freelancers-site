@@ -17,9 +17,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $views_path; ?>profile">Perfil</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $post_data_path; ?>logout">Cerrar sesión</a>
+                    </li>
                 <?php } else { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $views_path; ?>login">Iniciar Sesión</a>
+                        <a class="nav-link" href="<?= $views_path; ?>login">Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $views_path; ?>register">Crear cuenta</a>

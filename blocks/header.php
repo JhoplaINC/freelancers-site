@@ -6,8 +6,12 @@
 $server_path = '/aapruebas/freelancers-site/views/';
 $views_path = '/aapruebas/freelancers-site/views/';
 $landing_path = '/aapruebas/freelancers-site/landing/';
+$data_path = '/aapruebas/freelancers-site/data/';
+$get_data_path = $data_path . 'get_data/';
+$post_data_path = $data_path . 'post_data/';
 
-$styles_path = '../assets/css/bootstrap/';
+$styles_path = '../assets/css/';
+$bs_styles_path = '../assets/css/bootstrap/';
 $scripts_path = '../assets/js/';
 
 include_once 'styles.php';

@@ -1,0 +1,103 @@
+/* ___________ */
+/* GLOBAL VARS */
+/* ___________ */
+
+:root{
+    /* General Color */
+    --main-color: rgb(22, 85, 143);
+    --secondary-color: rgb(5, 131, 210);
+    --third-color: rgb(97, 176, 183);
+    --fourth-color: rgb(184, 227, 255);
+
+    /* Font colors */
+    --main-font-color: rgb(71, 71, 71);
+    --secondary-font-color: rgb(230, 230, 230);
+
+    /* General Fonts */
+    --main-font: 'Mukta Malar';
+
+    /* General Font Sizes */
+    --primary-font-size: 24px;
+    --secondary-font-size: 22px;
+    --third-font-size: 20px;
+    --fourth-font-size: 18px;
+    --fifth-font-size: 16px;
+    --sixth-font-size: 14px;
+
+    /*  */
+    --success-bg-color: rgb(81, 216, 87);
+    --info-bg-color: rgb(59, 213, 213);
+    --warning-bg-color: rgb(211, 220, 80);
+    --danger-bg-color: rgb(223, 68, 68);
+}
+
+/* ____________ */
+/* GLOBAL STYLE */
+/* ____________ */
+
+body {
+    font-family: var(--main-font)!important;
+}
+
+p {
+    font-size: var(--fourth-font-size);
+    color: var(--main-font-color);
+}
+
+/* ___________________________________ */
+/* ALERTS STYLE (OVERWRITING BS STYLE) */
+/* ___________________________________ */
+
+.alert{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1% 4% 1% 5%!important;
+    border-radius: 70px!important;
+    width: 50%;
+}
+
+.alert .btn-close{
+    width: 100%;
+    position: absolute!important;
+    padding: 1% 0!important;
+    background-position: 83% 8px;
+}
+
+.alert-success{
+    background-color: var(--success-bg-color)!important;
+}
+
+.alert-info{
+    background-color: var(--info-bg-color)!important;
+}
+
+.alert-warning{
+    background-color: var(--warning-bg-color)!important;
+}
+
+.alert-danger{
+    background-color: var(--danger-bg-color)!important;
+}
+
+.alert-danger *{
+    color: var(--secondary-font-color)!important;
+}
+
+/* _____________________________ */
+/* ALERTS STYLE (NO OVERWRITING) */
+/* _____________________________ */
+
+.alert .alert-header, .alert .alert-body{
+    width: 100%;
+    text-align: center;
+}
+
+.alert .alert-header p{
+    font-size: var(--secondary-font-size);
+}
+
+.alert .alert-body p{
+    font-size: var(--third-font-size);
+    margin: 0;
+}
