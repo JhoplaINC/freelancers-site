@@ -15,13 +15,13 @@ const FLASH_SUCCESS = 'success';
  * @param string $type
  * @return void
  */
-function create_flash_message(string $name, string $message, string $type): void {
+function create_flash_message(string $name, string $title, string $message, string $type): void {
     // remove existing message with the name
     if (isset($_SESSION[FLASH][$name])) {
         unset($_SESSION[FLASH][$name]);
     }
     // add the message to the session
-    $_SESSION[FLASH][$name] = ['message' => $message, 'type' => $type];
+    $_SESSION[FLASH][$name] = ['title' => $title, 'message' => $message, 'type' => $type];
 }
 
 
@@ -43,11 +43,12 @@ function format_flash_message(array $flash_message): string {
                         </div>
                         <div class="alert-body">
                             <p>
-                                Alert Body
+                                %s
                             </p>
                         </div>
                     </div>',
         $flash_message['type'],
+        $flash_message['title'],
         $flash_message['message']
     );
 }
@@ -103,10 +104,10 @@ function display_all_flash_messages(): void {
  * @param string $type (error, warning, info, success)
  * @return void
  */
-function flash(string $name = '', string $message = '', string $type = ''): void {
+function flash(string $name = '', string $title = '', string $message = '', string $type = ''): void {
     if ($name !== '' && $message !== '' && $type !== '') {
         // create a flash message
-        create_flash_message($name, $message, $type);
+        create_flash_message($name, $title, $message, $type);
     } elseif ($name !== '' && $message === '' && $type === '') {
         // display a flash message
         display_flash_message($name);

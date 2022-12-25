@@ -5,7 +5,7 @@
 <div class="alert alert-success">
     <div class="btn-close"></div>
     <div class="alert-header">
-        <p>Header Alert</p>
+        <p>¡Muy bien!</p>
     </div>
     <div class="alert-body">
         <p>Body Alert</p>
@@ -14,7 +14,7 @@
 <div class="alert alert-info">
     <div class="btn-close"></div>
     <div class="alert-header">
-        <p>Header Alert</p>
+        <p>¡Atención!</p>
     </div>
     <div class="alert-body">
         <p>Body Alert</p>
@@ -23,7 +23,7 @@
 <div class="alert alert-warning">
     <div class="btn-close"></div>
     <div class="alert-header">
-        <p>Header Alert</p>
+        <p>¡Cuidado!</p>
     </div>
     <div class="alert-body">
         <p>Body Alert</p>
@@ -32,7 +32,7 @@
 <div class="alert alert-danger">
     <div class="btn-close"></div>
     <div class="alert-header">
-        <p>Header Alert</p>
+        <p>¡Uh oh!</p>
     </div>
     <div class="alert-body">
         <p>Body Alert</p>

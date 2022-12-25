@@ -4,10 +4,10 @@
 
 :root{
     /* General Color */
-    --main-color: rgb(22, 85, 143);
-    --secondary-color: rgb(5, 131, 210);
-    --third-color: rgb(97, 176, 183);
-    --fourth-color: rgb(184, 227, 255);
+    --main-bg-color: rgb(22, 85, 143);
+    --secondary-bg-color: rgb(5, 131, 210);
+    --third-bg-color: rgb(97, 176, 183);
+    --fourth-bg-color: rgb(184, 227, 255);
 
     /* Font colors */
     --main-font-color: rgb(71, 71, 71);
@@ -41,6 +41,14 @@ body {
 
 p {
     font-size: var(--fourth-font-size);
+    color: var(--main-font-color);
+}
+
+.navbar{
+    background-color: var(--third-bg-color);
+}
+
+.navbar li a{
     color: var(--main-font-color);
 }
 

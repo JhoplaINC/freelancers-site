@@ -1,6 +1,7 @@
 <?php require_once '../blocks/head.php';
 
     // session_start();
+            require '../data/flash-messages.php';
 
     if (isset($_SESSION['user_id'])) {
         header('Location: http://localhost/aapruebas/freelancers-site/views/index');
@@ -18,16 +19,15 @@
 
         if (is_countable($results) > 0 && password_verify($_POST['user_password'], $results['user_password'])) {
             // Preparing Welcome Flash Message
-            require '../data/flash-messages.php';
 
             $_SESSION['user_id'] = $results['user_id']; 
             
-            flash('welcome-message', 'Bienvenido ' . $results['user_name'], FLASH_INFO);
+            flash('welcome-message', 'Bienvenido', 'Que gusto verte de nuevo por aquí '. $results['user_name'], FLASH_SUCCESS);
 
             header('Location: http://localhost/aapruebas/freelancers-site/views/profile');  
 
         } else {
-            $message = 'Lo sentimos, tus credenciales no coinciden con nuestros datos';
+            flash('credentials-error', 'Lo sentimos', 'tus credenciales no coinciden con nuestros datos', FLASH_ERROR);
         }
     }
 
@@ -47,13 +47,9 @@
         </li>
     </ul>
     
-    
+    <?= flash('credentials-error'); ?>
     
 </form>
-
-<?php if(!empty($message)): ?>
-    <p> <?= $message ?></p>
-<?php endif; ?>
 
 <p>Aún no tienes una cuenta? <a href="register">Crea una!</a></p>
 

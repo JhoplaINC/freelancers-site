@@ -24,11 +24,18 @@ if(count($results) > 0){
     $email = $user_data['user_email'];
 
 ?>
-    <?= flash('welcome-message') ?>
+    <?= flash('updated-account'); ?>
+    <?= flash('welcome-message'); ?>
+    
+    <h1>Header Perfil</h1>
+    <div class="profile-photo-section"><img src="../assets/img/profile-img-default.png"></div>
     <p>Welcome. <?= $name; ?></p>
     <p><?= $user_rol; ?></p>
-    <a href="../data/post_data/logout">
-        Logout
+    <a href="<?=$post_data_path;?>logout">
+        Cerrar sesión
+    </a>
+    <a href="<?= $views_path; ?>update-profile">
+        Actualizar perfil
     </a>
     <?php
        
