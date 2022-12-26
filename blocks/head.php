@@ -13,7 +13,15 @@
             <?php session_start(); ?>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <?php if (isset($_SESSION['user_id'])) { ?>
-                <ul class="navbar-nav w-100 justify-content-end" style="padding-right: 5%;">
+                <ul class="navbar-nav w-50">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $views_path; ?>posts">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $views_path; ?>create-post">Crear publicación</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav w-50 justify-content-end" style="padding-right: 5%;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Mi cuenta</a>
                         <ul class="dropdown-menu">
@@ -29,6 +37,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $views_path; ?>register">Crear cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $views_path; ?>posts">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $views_path; ?>create-post">Crear publicación</a>
                     </li>
                 </ul>
                 <?php } ?>

@@ -37,15 +37,6 @@ if(count($results) > 0){
     <a href="<?= $views_path; ?>update-profile">
         Actualizar perfil
     </a>
-    <?php
-       
-        // if(isset($_SESSION['welcome_message'])) {
-        //     $message = $_SESSION['welcome_message'];
-        //     unset($_SESSION['welcome_message']);
-        //     echo $message;
-        // }
-
-    ?>
 
 <?php } else { 
    
